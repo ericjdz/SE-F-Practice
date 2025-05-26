@@ -1,0 +1,821 @@
+[
+  {
+    "module": "Software Testing and Quality Assurance Quiz",
+    "questions": [
+      {
+        "question": "Cyclomatic complexity measures:",
+        "options": {
+          "a": "Program efficiency",
+          "b": "Execution speed",
+          "c": "Structural complexity",
+          "d": "Module size"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Bottom-up integration testing starts with:",
+        "options": {
+          "a": "GUI components",
+          "b": "Core modules",
+          "c": "The main application entry point",
+          "d": "Fully integrated system"
+        },
+        "answer": "b",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which metric best evaluates decision logic complexity in a module?",
+        "options": {
+          "a": "Defect density",
+          "b": "LOC",
+          "c": "Cyclomatic complexity",
+          "d": "Function points"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which is an example of a process metric?",
+        "options": {
+          "a": "Module cohesion",
+          "b": "Cyclomatic complexity",
+          "c": "Defect density",
+          "d": "Effort distribution"
+        },
+        "answer": "d",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Reviews during development primarily aim to:",
+        "options": {
+          "a": "Replace formal testing",
+          "b": "Improve execution time",
+          "c": "Identify defects early",
+          "d": "Reduce user feedback"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which approach tests a software's internal logic?",
+        "options": {
+          "a": "Black-box testing",
+          "b": "Alpha testing",
+          "c": "Beta testing",
+          "d": "White-box testing"
+        },
+        "answer": "d",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which technique relies on analogy and experience for estimating effort?",
+        "options": {
+          "a": "Function point analysis",
+          "b": "Algorithmic models",
+          "c": "Expert judgment",
+          "d": "Halstead metrics"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which of the following is NOT a valid benefit of using metrics in software engineering?",
+        "options": {
+          "a": "Guaranteeing project success",
+          "b": "Measuring progress",
+          "c": "Improving quality",
+          "d": "Controlling cost"
+        },
+        "answer": "a",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which metric can be used to assess productivity in terms of code produced?",
+        "options": {
+          "a": "Number of errors",
+          "b": "LOC per staff month",
+          "c": "Review efficiency",
+          "d": "Defect rate"
+        },
+        "answer": "b",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Top-down integration testing proceeds by:",
+        "options": {
+          "a": "Testing the entire system at once",
+          "b": "Starting with the main control module and integrating down",
+          "c": "Building from core components up",
+          "d": "Performing system-wide debugging"
+        },
+        "answer": "b",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which of the following is a direct output of estimation processes?",
+        "options": {
+          "a": "Use case diagrams",
+          "b": "Source code",
+          "c": "Budget",
+          "d": "Test plan"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "A formal review involving detailed preparation and defect logging is called:",
+        "options": {
+          "a": "Informal review",
+          "b": "Desk check",
+          "c": "Inspection",
+          "d": "Walkthrough"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Formal technical reviews (FTRs) are mainly conducted to:",
+        "options": {
+          "a": "Validate design decisions",
+          "b": "Estimate project effort",
+          "c": "Identify errors before testing",
+          "d": "Benchmark UI consistency"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "How do process metrics benefit software development teams?",
+        "options": {
+          "a": "Increase hardware efficiency",
+          "b": "Assess individual salaries",
+          "c": "Monitor and improve methodologies",
+          "d": "Predict UI trends"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which review technique is informal and typically done by a single peer?",
+        "options": {
+          "a": "Walkthrough",
+          "b": "Informal review",
+          "c": "Inspection",
+          "d": "Audit"
+        },
+        "answer": "b",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which of the following is NOT a quality attribute defined by ISO 9126?",
+        "options": {
+          "a": "Functionality",
+          "b": "Portability",
+          "c": "Adaptability",
+          "d": "Maintainability"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which of the following activities is NOT typically part of software quality assurance?",
+        "options": {
+          "a": "Testing strategy planning",
+          "b": "Standard enforcement",
+          "c": "Fault injection",
+          "d": "Process compliance auditing"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Boundary value analysis is an example of:",
+        "options": {
+          "a": "White-box testing",
+          "b": "Black-box testing",
+          "c": "Integration testing",
+          "d": "Unit testing"
+        },
+        "answer": "b",
+        "source": "UserProvided"
+      },
+      {
+        "question": "Which review type is typically informal and done by a peer?",
+        "options": {
+          "a": "Inspection",
+          "b": "Audit",
+          "c": "Peer review",
+          "d": "Walkthrough"
+        },
+        "answer": "c",
+        "source": "UserProvided"
+      },
+      {
+        "question": "What is the primary intent of software testing according to Pressman?",
+        "options": {
+          "a": "To prove the software is error-free",
+          "b": "To find errors prior to delivery",
+          "c": "To improve software performance",
+          "d": "To validate user requirements"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "According to Boehm, 'Are we building the product right?' refers to:",
+        "options": {
+          "a": "Validation",
+          "b": "Verification",
+          "c": "System Testing",
+          "d": "User Acceptance Testing"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "In software testing strategy, what does 'testing-in-the-small' primarily focus on for conventional software?",
+        "options": {
+          "a": "The entire system",
+          "b": "Interactions between multiple systems",
+          "c": "Individual modules or components",
+          "d": "User interface elements"
+        },
+        "answer": "c",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "Which of these is NOT a strategic issue in software testing mentioned by Pressman?",
+        "options": {
+          "a": "Specify product requirements in a quantifiable manner",
+          "b": "State testing objectives explicitly",
+          "c": "Maximize the number of test cases executed",
+          "d": "Develop a continuous improvement approach for the testing process"
+        },
+        "answer": "c",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "What is the role of a 'stub' in a unit test environment?",
+        "options": {
+          "a": "To call the module being tested",
+          "b": "To simulate modules called by the module under test",
+          "c": "To provide test data",
+          "d": "To record test results"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "The 'big bang' approach is a strategy for which type of testing?",
+        "options": {
+          "a": "Unit testing",
+          "b": "Integration testing",
+          "c": "Validation testing",
+          "d": "System testing"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "What is the primary purpose of regression testing?",
+        "options": {
+          "a": "To test new features",
+          "b": "To ensure changes have not introduced unintended side effects",
+          "c": "To validate performance under load",
+          "d": "To find all remaining bugs"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "Smoke testing is often associated with:",
+        "options": {
+          "a": "Final system validation",
+          "b": "Security penetration testing",
+          "c": "Creating 'daily builds'",
+          "d": "User interface usability testing"
+        },
+        "answer": "c",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "In Object-Oriented testing, 'thread-based testing' integrates classes required to respond to:",
+        "options": {
+          "a": "All possible user inputs",
+          "b": "One specific input or event",
+          "c": "A single use case",
+          "d": "A specific collaboration"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "Which type of testing forces the software to fail in various ways to verify recovery procedures?",
+        "options": {
+          "a": "Stress testing",
+          "b": "Security testing",
+          "c": "Recovery testing",
+          "d": "Performance testing"
+        },
+        "answer": "c",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "The primary aim of debugging is to:",
+        "options": {
+          "a": "Find new errors",
+          "b": "Diagnose and correct the cause of known errors",
+          "c": "Verify software requirements",
+          "d": "Optimize code performance"
+        },
+        "answer": "b",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "Which of the following is a reason why debugging can be difficult, according to Pressman?",
+        "options": {
+          "a": "Symptoms and causes are always co-located",
+          "b": "Errors are always reproducible",
+          "c": "Symptoms may disappear when another problem is fixed",
+          "d": "The cause is always a single, clear error"
+        },
+        "answer": "c",
+        "source": "Chapter 22"
+      },
+      {
+        "question": "One of the outcomes derived from a software process for measurement purposes is:",
+        "options": {
+          "a": "The programming language used",
+          "b": "The number of developers on the team",
+          "c": "Measures of errors uncovered before release",
+          "d": "The specific hardware used for development"
+        },
+        "answer": "c",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "According to Pressman, which guideline is important when interpreting metrics data?",
+        "options": {
+          "a": "Use metrics to appraise individuals publicly",
+          "b": "Never provide feedback to individuals who collect measures",
+          "c": "Use common sense and organizational sensitivity",
+          "d": "Obsess on a single metric for detailed analysis"
+        },
+        "answer": "c",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "Defect Removal Efficiency (DRE) is an example of what type of process metric?",
+        "options": {
+          "a": "Productivity-related",
+          "b": "Quality-related",
+          "c": "Reuse data",
+          "d": "Statistical SQA data"
+        },
+        "answer": "b",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "Which of these is a typical size-oriented metric?",
+        "options": {
+          "a": "Errors per FP",
+          "b": "Errors per KLOC",
+          "c": "Customer satisfaction rating",
+          "d": "Schedule conformance"
+        },
+        "answer": "b",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "A key advantage of Function Point (FP) metrics over LOC metrics is that FPs are:",
+        "options": {
+          "a": "Easier to count automatically",
+          "b": "Directly related to CPU usage",
+          "c": "Programming language independent",
+          "d": "Primarily focused on code structure"
+        },
+        "answer": "c",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "The Defect Removal Efficiency (DRE) formula E / (E + D) uses 'D' to represent:",
+        "options": {
+          "a": "Development effort",
+          "b": "Number of defects found after delivery",
+          "c": "Number of days for testing",
+          "d": "Documentation pages"
+        },
+        "answer": "b",
+        "source": "Chapter 32"
+      },
+      {
+        "question": "Establishing an explicit measurement goal is the first step in which paradigm?",
+        "options": {
+          "a": "Agile Estimation",
+          "b": "COCOMO-II",
+          "c": "Goal/Question/Metric (GQM)",
+          "d": "Six Sigma DMAIC"
+        },
+        "answer": "c",
+        "source": "Chapter 30 & 32"
+      },
+      {
+        "question": "Which of the following is a primary task in the software project planning process according to Pressman?",
+        "options": {
+          "a": "Writing detailed user manuals",
+          "b": "Conducting performance testing",
+          "c": "Establishing project scope",
+          "d": "Deploying the final product"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "Estimation of resources, cost, and schedule for a software project primarily requires:",
+        "options": {
+          "a": "The latest development tools",
+          "b": "A large development team",
+          "c": "Experience and access to good historical information",
+          "d": "A fully defined system architecture"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "Software scope describes functions, features, data, content, and also:",
+        "options": {
+          "a": "The specific algorithms to be used",
+          "b": "The number of developers required",
+          "c": "The project manager's name",
+          "d": "Performance, constraints, interfaces, and reliability"
+        },
+        "answer": "d",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "Which estimation technique involves breaking down a task and estimating effort for each sub-task?",
+        "options": {
+          "a": "Empirical models",
+          "b": "Past project experience",
+          "c": "Conventional estimation (task breakdown)",
+          "d": "Automated tools"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "The accuracy of an estimation is predicated on:",
+        "options": {
+          "a": "The number of lines of code written",
+          "b": "The stability of product requirements and the support environment",
+          "c": "The complexity of the database schema",
+          "d": "The specific programming language chosen"
+        },
+        "answer": "b",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "Process-based estimation derives effort from:",
+        "options": {
+          "a": "The number of use cases",
+          "b": "The complexity of the user interface",
+          "c": "Framework activities applied to application functions",
+          "d": "Historical LOC/FP data only"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "COCOMO II's 'Application composition model' is used during which stage of software engineering?",
+        "options": {
+          "a": "During construction of the software",
+          "b": "After the architecture is fully defined",
+          "c": "Early stages, when prototyping and technology evaluation are key",
+          "d": "Only for maintenance projects"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "In the Software Equation, 'P' represents:",
+        "options": {
+          "a": "Project duration",
+          "b": "Person-months of effort",
+          "c": "Productivity parameter",
+          "d": "Process maturity level"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "When estimating for Agile projects, each user scenario is typically:",
+        "options": {
+          "a": "Estimated as a single large block of work",
+          "b": "Ignored until the final sprint",
+          "c": "Considered separately and decomposed into tasks",
+          "d": "Estimated only by the project manager"
+        },
+        "answer": "c",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "In a make-buy decision, computing expected cost involves:",
+        "options": {
+          "a": "Choosing the option with the lowest initial price",
+          "b": "Summing path probabilities multiplied by estimated path costs",
+          "c": "Ignoring the probability of different outcomes",
+          "d": "Only considering the cost to build in-house"
+        },
+        "answer": "b",
+        "source": "Chapter 33"
+      },
+      {
+        "question": "Which of the 'Golden Rules' of UI design emphasizes providing undoable actions?",
+        "options": {
+          "a": "Place the user in control",
+          "b": "Reduce the user's memory load",
+          "c": "Make the interface consistent",
+          "d": "Maximize visual elements"
+        },
+        "answer": "a",
+        "source": "Chapter 15"
+      },
+      {
+        "question": "The user's mental image of what the interface is, is known as the:",
+        "options": {
+          "a": "User model",
+          "b": "Design model",
+          "c": "Mental model (system perception)",
+          "d": "Implementation model"
+        },
+        "answer": "c",
+        "source": "Chapter 15"
+      },
+      {
+        "question": "A Swimlane Diagram in UI analysis is primarily used to:",
+        "options": {
+          "a": "Show database schema relationships",
+          "b": "Illustrate roles and task flow across them in a workflow",
+          "c": "Detail screen layout and color palettes",
+          "d": "Map user objectives to interface actions"
+        },
+        "answer": "b",
+        "source": "Chapter 15"
+      },
+      {
+        "question": "Tognozzi suggests that effective Web/Mobile App interfaces should:",
+        "options": {
+          "a": "Expose all technical workings of the system to the user",
+          "b": "Require maximum information from users to perform tasks",
+          "c": "Be visually apparent and forgiving",
+          "d": "Focus on the efficiency of the software engineer"
+        },
+        "answer": "c",
+        "source": "Chapter 15"
+      },
+      {
+        "question": "The UI design principle 'Fitt’s Law' relates to:",
+        "options": {
+          "a": "The consistency of menu navigation",
+          "b": "The time to acquire a target based on distance and size",
+          "c": "The readability of on-screen text",
+          "d": "The anticipation of the user's next move"
+        },
+        "answer": "b",
+        "source": "Chapter 15"
+      },
+      {
+        "question": "Which of the following is a pragmatic view of quality, suggesting quality is tied to inherent characteristics of a product?",
+        "options": {
+          "a": "Transcendental view",
+          "b": "User view",
+          "c": "Product view",
+          "d": "Value-based view"
+        },
+        "answer": "c",
+        "source": "Chapter 19"
+      },
+      {
+        "question": "Which of Garvin's Quality Dimensions refers to whether software delivers all features and capability without failure?",
+        "options": {
+          "a": "Performance Quality",
+          "b": "Conformance",
+          "c": "Reliability",
+          "d": "Durability"
+        },
+        "answer": "c",
+        "source": "Chapter 19"
+      },
+      {
+        "question": "The costs associated with quality planning, formal technical reviews, and training are known as:",
+        "options": {
+          "a": "Prevention costs",
+          "b": "Internal failure costs",
+          "c": "External failure costs",
+          "d": "Appraisal costs"
+        },
+        "answer": "a",
+        "source": "Chapter 19"
+      },
+      {
+        "question": "According to Pressman, an 'error' is a quality problem found:",
+        "options": {
+          "a": "Only after the software has been released",
+          "b": "Before the software is released to end users",
+          "c": "During system testing exclusively",
+          "d": "By the end-user"
+        },
+        "answer": "b",
+        "source": "Chapter 20"
+      },
+      {
+        "question": "In the context of review metrics, WPS stands for:",
+        "options": {
+          "a": "Weighted Priority Score",
+          "b": "Work Product Size",
+          "c": "Weekly Progress Status",
+          "d": "Workflow Process Steps"
+        },
+        "answer": "b",
+        "source": "Chapter 20"
+      },
+      {
+        "question": "Which FTR player is responsible for evaluating the product for readiness and distributing materials?",
+        "options": {
+          "a": "Producer",
+          "b": "Review leader",
+          "c": "Reviewer",
+          "d": "Recorder"
+        },
+        "answer": "b",
+        "source": "Chapter 20"
+      },
+      {
+        "question": "What is a key guideline for conducting a review?",
+        "options": {
+          "a": "Focus on critiquing the producer's abilities",
+          "b": "Attempt to solve every problem noted during the meeting",
+          "c": "Encourage lengthy debate and rebuttal on each point",
+          "d": "Review the product, not the producer"
+        },
+        "answer": "d",
+        "source": "Chapter 20"
+      },
+      {
+        "question": "Which SQA element involves preparing an SQA plan for a project, identifying evaluations and audits to be performed?",
+        "options": {
+          "a": "Testing",
+          "b": "The SQA Group's role",
+          "c": "Error/defect collection and analysis",
+          "d": "Standards"
+        },
+        "answer": "b",
+        "source": "Chapter 21"
+      },
+      {
+        "question": "The Six Sigma methodology step that involves collecting defect metrics to determine current quality performance is:",
+        "options": {
+          "a": "Define",
+          "b": "Measure",
+          "c": "Analyze",
+          "d": "Improve"
+        },
+        "answer": "b",
+        "source": "Chapter 21"
+      },
+      {
+        "question": "Software Availability is calculated as:",
+        "options": {
+          "a": "MTTF / MTTR",
+          "b": "(MTTF + MTTR) / MTTF",
+          "c": "[MTTF / (MTTF + MTTR)] x 100%",
+          "d": "MTBF / MTTF"
+        },
+        "answer": "c",
+        "source": "Chapter 21"
+      },
+      {
+        "question": "The Goal/Question/Metric (GQM) paradigm is used for:",
+        "options": {
+          "a": "Defining user interface layouts",
+          "b": "Structuring code reviews",
+          "c": "Guiding software measurement efforts",
+          "d": "Allocating project resources"
+        },
+        "answer": "c",
+        "source": "Chapter 30"
+      },
+      {
+        "question": "Which of the following is an information domain value used in Function Point calculation?",
+        "options": {
+          "a": "Number of classes",
+          "b": "Lines of code",
+          "c": "Number of external inputs (EIs)",
+          "d": "Cyclomatic complexity"
+        },
+        "answer": "c",
+        "source": "Chapter 30"
+      },
+      {
+        "question": "The CK metric 'DIT' stands for:",
+        "options": {
+          "a": "Data Integration Test",
+          "b": "Depth of Inheritance Tree",
+          "c": "Design Iteration Time",
+          "d": "Dynamic Interface Type"
+        },
+        "answer": "b",
+        "source": "Chapter 30"
+      },
+      {
+        "question": "Halstead's Software Science metrics are predicated on the number of:",
+        "options": {
+          "a": "Function points and use cases",
+          "b": "Operators and operands",
+          "c": "Modules and interfaces",
+          "d": "Test cases and defects"
+        },
+        "answer": "b",
+        "source": "Chapter 30"
+      },
+      {
+        "question": "The Software Maturity Index (SMI) approaching 1.0 indicates that the product is:",
+        "options": {
+          "a": "Newly released",
+          "b": "Undergoing major revisions",
+          "c": "Becoming stable",
+          "d": "About to be retired"
+        },
+        "answer": "c",
+        "source": "Chapter 30"
+      },
+      {
+        "question": "What is defect propagation in the context of defect amplification?",
+        "options": {
+          "a": "Fixing defects quickly",
+          "b": "Errors being carried forward into later phases",
+          "c": "The initial introduction of an error",
+          "d": "Reducing the number of defects through reviews"
+        },
+        "answer": "b",
+        "source": "Defect Amplification PDF"
+      },
+      {
+        "question": "A higher Defect Amplification Ratio (DAR) for a specific phase indicates:",
+        "options": {
+          "a": "Very effective defect detection in that phase",
+          "b": "Defects are not being detected effectively in that phase",
+          "c": "The phase introduced very few defects",
+          "d": "All defects from previous phases were caught"
+        },
+        "answer": "b",
+        "source": "Defect Amplification PDF"
+      },
+      {
+        "question": "What is the primary role of end-users in User Acceptance Testing (UAT)?",
+        "options": {
+          "a": "To write the test plan and test cases",
+          "b": "To fix defects found during testing",
+          "c": "To test the system in a real-world scenario and provide feedback",
+          "d": "To manage the UAT environment"
+        },
+        "answer": "c",
+        "source": "UAT PDF"
+      },
+      {
+        "question": "Which of the following is a typical UAT Entry Criterion?",
+        "options": {
+          "a": "All user documentation is finalized",
+          "b": "The marketing campaign is ready to launch",
+          "c": "No major critical defects are present from prior testing phases",
+          "d": "The development team has signed off on the code"
+        },
+        "answer": "c",
+        "source": "UAT PDF"
+      },
+      {
+        "question": "In UAT, 'Exploratory Testing' involves:",
+        "options": {
+          "a": "Strictly following predefined test cases",
+          "b": "Users exploring the system to identify unexpected issues",
+          "c": "Automated execution of test scripts",
+          "d": "Testing only the graphical user interface"
+        },
+        "answer": "b",
+        "source": "UAT PDF"
+      },
+      {
+        "question": "A 'Critical' severity defect in UAT typically means:",
+        "options": {
+          "a": "A minor UI or cosmetic issue",
+          "b": "Functionality is affected but a workaround exists",
+          "c": "A system crash or major functionality failure",
+          "d": "A suggestion for future enhancement"
+        },
+        "answer": "c",
+        "source": "UAT PDF"
+      }
+    ]
+  }
+]

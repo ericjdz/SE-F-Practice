@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #eef2f5; /* Light blue-gray background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        .quiz-wrapper {
+            width: 100%;
+            max-width: 900px;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .module-section {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .module-section:last-child {
+            border-bottom: none;
+        }
+        h1 {
+            color: #00509e; /* Cisco Blue */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        h2 { /* Module Title */
+            color: #007bff;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #007bff;
+            font-size: 1.8em;
+        }
+        h3 { /* Question Text */
+            color: #2c3e50; /* Darker text */
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.15em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        label {
+            cursor: pointer;
+            display: flex; /* Align radio button and text */
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        label:hover {
+            background-color: #e9ecef;
+            border-color: #bbb;
+        }
+        input[type="radio"] {
+            margin-right: 12px;
+            vertical-align: middle;
+            transform: scale(1.1); /* Slightly larger radio */
+        }
+        .answer-feedback {
+            margin-top: 8px;
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+        }
+        .correct-feedback {
+            background-color: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+        .incorrect-feedback {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-left: 5px solid #dc3545;
+        }
+        .hidden-answer {
+            display: none;
+        }
+        .shown-answer {
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #e6ffe6; /* Light green background */
+            color: #218838; /* Darker green text */
+            border: 1px solid #badbcc;
+            border-left: 5px solid #28a745; /* Green accent */
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .quiz-btn {
+            padding: 12px 25px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            margin: 0 10px;
+        }
+        .quiz-btn:hover {
+            background-color: #0056b3;
+        }
+        .quiz-btn:active {
+            transform: translateY(1px);
+        }
+        #score-container {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+            border-radius: 6px;
+            display: none; /* Hidden initially */
+        }
+        #progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensures inner bar stays contained */
+        }
+        #progress-bar {
+            width: 0%;
+            height: 20px;
+            background-color: #4caf50; /* Green */
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            font-size: 0.9em;
+            transition: width 0.3s ease-in-out;
+        }
+        .options-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .options-container label {
+            border: none; /* Remove border for option labels */
+            background-color: transparent;
+            padding: 5px;
+        }
+        .question-block.incorrect-question label.selected-option.user-incorrect {
+            background-color: #f8d7da; /* Light red for user's incorrect choice */
+            border-color: #f5c6cb;
+        }
+        .question-block.incorrect-question label.correct-option-highlight {
+            background-color: #d4edda !important; /* Light green for correct option on review */
+            border-color: #c3e6cb !important;
+        }
+        .option-text {
+            display: inline-block; /* Ensures code tags render correctly */
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <h1>Quizzer</h1>
+
+            <div id="progress-bar-container">
+                <div id="progress-bar">0%</div>
+            </div>
+
+            <div class="options-container">
+                <label><input type="checkbox" id="immediateFeedback"> Show immediate feedback after each answer</label>
+                <label><input type="checkbox" id="shuffleQuestions"> Shuffle questions within modules</label>
+            </div>
+
+            <div id="quiz-content">
+                <!-- Questions will be loaded here by JavaScript -->
+            </div>
+
+            <div class="button-container">
+                <button class="quiz-btn" id="submitQuizBtn" onclick="submitQuiz()">Submit Quiz</button>
+                <button class="quiz-btn" id="resetQuizBtn" onclick="resetQuiz()">Reset Quiz</button>
+                <button class="quiz-btn" id="toggleAnswersBtn" onclick="toggleAllAnswers()" style="display:none;">Review Answers</button>
+            </div>
+
+            <div id="score-container">
+                <!-- Score will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quizDataGlobal = [];
+        let overallQuestionCounter = 0;
+        let totalQuestions = 0;
+        let userAnswers = {}; // To store user's answers {q_id: selected_option}
+
+        // Function to shuffle an array (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        async function loadQuiz() {
+            try {
+                const response = await fetch('quiz_data.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const rawData = await response.json();
+                quizDataGlobal = rawData; // Store for later use (like reset)
+
+                const shuffle = document.getElementById('shuffleQuestions').checked;
+                if (shuffle) {
+                    quizDataGlobal.forEach(module => {
+                        shuffleArray(module.questions);
+                    });
+                }
+
+                renderQuiz(quizDataGlobal);
+
+            } catch (error) {
+                console.error("Could not load quiz data:", error);
+                document.getElementById('quiz-content').innerHTML = '<p>Error loading quiz questions. Please check the console.</p>';
+            }
+        }
+
+        function renderQuiz(data) {
+            const quizContentDiv = document.getElementById('quiz-content');
+            quizContentDiv.innerHTML = ''; // Clear previous content
+            overallQuestionCounter = 0;
+            totalQuestions = 0;
+            userAnswers = {};
+
+            data.forEach(module => {
+                const moduleSection = document.createElement('div');
+                moduleSection.classList.add('module-section');
+
+                const moduleTitle = document.createElement('h2');
+                moduleTitle.textContent = module.module;
+                moduleSection.appendChild(moduleTitle);
+
+                module.questions.forEach(q => {
+                    overallQuestionCounter++;
+                    totalQuestions++;
+                    const questionId = `q_${module.module.replace(/\s+/g, '_')}_${overallQuestionCounter}`; // Unique ID
+
+                    const questionBlock = document.createElement('div');
+                    questionBlock.classList.add('question-block');
+                    questionBlock.id = `qb-${questionId}`; // ID for the block
+
+                    const questionText = document.createElement('h3');
+                    const questionNumberSpan = document.createElement('span');
+                    questionNumberSpan.classList.add('question-number');
+                    questionNumberSpan.textContent = `Q${overallQuestionCounter}: `;
+                    questionText.appendChild(questionNumberSpan);
+                    questionText.appendChild(document.createTextNode(q.question));
+                    questionBlock.appendChild(questionText);
+
+                    const optionsList = document.createElement('ul');
+                    for (const key in q.options) {
+                        const listItem = document.createElement('li');
+                        const label = document.createElement('label');
+                        label.id = `label-${questionId}-${key}`;
+                        const radio = document.createElement('input');
+                        radio.type = 'radio';
+                        radio.name = questionId;
+                        radio.value = key;
+                        radio.dataset.questionId = questionId; // Store question ID for event handling
+                        radio.dataset.correctAnswer = q.answer;
+
+                        radio.addEventListener('change', handleOptionChange);
+
+                        label.appendChild(radio);
+                        const optionTextSpan = document.createElement('span');
+                        optionTextSpan.classList.add('option-text');
+                        optionTextSpan.innerHTML = ` ${key.toUpperCase()}) ${q.options[key]}`;
+                        label.appendChild(optionTextSpan);
+
+                        listItem.appendChild(label);
+                        optionsList.appendChild(listItem);
+                    }
+                    questionBlock.appendChild(optionsList);
+
+                    // For immediate feedback
+                    const feedbackDiv = document.createElement('div');
+                    feedbackDiv.classList.add('answer-feedback');
+                    feedbackDiv.id = `feedback-${questionId}`;
+                    questionBlock.appendChild(feedbackDiv);
+
+                    // For showing correct answer on review (initially hidden)
+                    const hiddenAnswerDiv = document.createElement('div');
+                    hiddenAnswerDiv.classList.add('hidden-answer'); // Used by toggleAllAnswers
+                    hiddenAnswerDiv.id = `answer-${questionId}`;
+                    hiddenAnswerDiv.innerHTML = `Correct Answer: ${q.answer.toUpperCase()}) ${q.options[q.answer]}`;
+                    questionBlock.appendChild(hiddenAnswerDiv);
+
+
+                    moduleSection.appendChild(questionBlock);
+                });
+                quizContentDiv.appendChild(moduleSection);
+            });
+            updateProgressBar();
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('submitQuizBtn').style.display = 'inline-block';
+            document.getElementById('toggleAnswersBtn').style.display = 'none';
+            enableQuizOptions(true);
+        }
+
+        function handleOptionChange(event) {
+            const selectedRadio = event.target;
+            const questionId = selectedRadio.dataset.questionId;
+            const correctAnswer = selectedRadio.dataset.correctAnswer;
+            const selectedValue = selectedRadio.value;
+            userAnswers[questionId] = selectedValue; // Store user's answer
+
+            const feedbackDiv = document.getElementById(`feedback-${questionId}`);
+            const immediateFeedbackEnabled = document.getElementById('immediateFeedback').checked;
+
+            if (immediateFeedbackEnabled) {
+                feedbackDiv.style.display = 'block';
+                if (selectedValue === correctAnswer) {
+                    feedbackDiv.textContent = 'Correct!';
+                    feedbackDiv.className = 'answer-feedback correct-feedback';
+                } else {
+                    feedbackDiv.textContent = `Incorrect. The correct answer is ${correctAnswer.toUpperCase()}.`;
+                    feedbackDiv.className = 'answer-feedback incorrect-feedback';
+                }
+            } else {
+                feedbackDiv.style.display = 'none';
+            }
+            updateProgressBar();
+        }
+
+        function updateProgressBar() {
+            const answeredQuestions = Object.keys(userAnswers).length;
+            const progress = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0;
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = `${progress}%`;
+            progressBar.textContent = `${Math.round(progress)}%`;
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            quizDataGlobal.forEach(module => {
+                module.questions.forEach((q, index) => {
+                    // Reconstruct questionId based on how it was created in renderQuiz
+                    const questionRenderIndex = Array.prototype.indexOf.call(quizDataGlobal, module) * module.questions.length + index + 1; // Approximate render index
+                    const qIdPrefix = `q_${module.module.replace(/\s+/g, '_')}_`;
+                    
+                    // Need to find the actual rendered question ID based on the text or a more stable identifier if questions were shuffled
+                    // For simplicity here, we'll assume quizDataGlobal questions array order matches the DOM rendering for scoring
+                    // This needs to be more robust if shuffling is a primary concern post-render.
+                    // We can iterate through rendered questions if necessary. For now, this matches the current render flow:
+
+                    let questionId = "";
+                    let renderedQuestionCounter = 0;
+                    for (let m of quizDataGlobal) {
+                        for (let renderedQ of m.questions) {
+                            renderedQuestionCounter++;
+                            if (renderedQ.question === q.question) { // Matching based on question text
+                                questionId = `q_${m.module.replace(/\s+/g, '_')}_${renderedQuestionCounter}`;
+                                break;
+                            }
+                        }
+                        if (questionId) break;
+                    }
+
+
+                    const userAnswer = userAnswers[questionId];
+                    const questionBlock = document.getElementById(`qb-${questionId}`);
+
+                    if (questionBlock) { // Ensure block exists
+                        // Clear previous feedback styles if any
+                        const labels = questionBlock.querySelectorAll('label');
+                        labels.forEach(lbl => {
+                            lbl.classList.remove('selected-option', 'user-incorrect', 'correct-option-highlight');
+                        });
+                         const feedbackDiv = document.getElementById(`feedback-${questionId}`);
+                        if (feedbackDiv) feedbackDiv.style.display = 'none'; // Hide immediate feedback
+
+                        const radios = document.getElementsByName(questionId);
+                        let userSelectedLabel = null;
+                        radios.forEach(radio => {
+                            if (radio.checked) {
+                                userSelectedLabel = document.getElementById(`label-${questionId}-${radio.value}`);
+                            }
+                        });
+
+
+                        if (userAnswer === q.answer) {
+                            score++;
+                        } else {
+                             if(questionBlock) questionBlock.classList.add('incorrect-question');
+                             if (userSelectedLabel) {
+                                 userSelectedLabel.classList.add('selected-option', 'user-incorrect');
+                             }
+                             const correctLabel = document.getElementById(`label-${questionId}-${q.answer}`);
+                             if (correctLabel) {
+                                 correctLabel.classList.add('correct-option-highlight');
+                             }
+                        }
+                    }
+                });
+            });
+
+            const scoreContainer = document.getElementById('score-container');
+            scoreContainer.innerHTML = `Your Score: ${score} out of ${totalQuestions} (${Math.round((score/totalQuestions)*100)}%)`;
+            scoreContainer.style.display = 'block';
+            document.getElementById('submitQuizBtn').style.display = 'none';
+            document.getElementById('toggleAnswersBtn').style.display = 'inline-block';
+            disableQuizInputs();
+            enableQuizOptions(false); // Disable shuffle/immediate feedback after submission
+        }
+
+        function disableQuizInputs() {
+            const radioButtons = document.querySelectorAll('#quiz-content input[type="radio"]');
+            radioButtons.forEach(radio => radio.disabled = true);
+        }
+        function enableQuizInputs() {
+            const radioButtons = document.querySelectorAll('#quiz-content input[type="radio"]');
+            radioButtons.forEach(radio => radio.disabled = false);
+        }
+         function enableQuizOptions(enable) {
+            document.getElementById('immediateFeedback').disabled = !enable;
+            document.getElementById('shuffleQuestions').disabled = !enable;
+        }
+
+
+        function resetQuiz() {
+            quizDataGlobal.forEach(module => { // Re-shuffle if it was enabled
+                 if (document.getElementById('shuffleQuestions').checked) {
+                    shuffleArray(module.questions);
+                }
+            });
+            renderQuiz(quizDataGlobal); // Re-render the quiz with potentially re-shuffled or original order
+            enableQuizInputs();
+        }
+
+
+        function toggleAllAnswers() {
+            // This function now reveals the pre-prepared correct answer divs
+            // And also highlights choices if the quiz has been submitted
+            const quizSubmitted = document.getElementById('submitQuizBtn').style.display === 'none';
+
+            quizDataGlobal.forEach(module => {
+                module.questions.forEach((q, index) => {
+                     let questionId = "";
+                    let renderedQuestionCounter = 0;
+                    for (let m of quizDataGlobal) {
+                        for (let renderedQ of m.questions) {
+                            renderedQuestionCounter++;
+                            if (renderedQ.question === q.question) {
+                                questionId = `q_${m.module.replace(/\s+/g, '_')}_${renderedQuestionCounter}`;
+                                break;
+                            }
+                        }
+                        if (questionId) break;
+                    }
+
+                    const answerDiv = document.getElementById(`answer-${questionId}`);
+                    const questionBlock = document.getElementById(`qb-${questionId}`);
+
+                    if (answerDiv && questionBlock) {
+                        if (answerDiv.classList.contains('hidden-answer')) {
+                            answerDiv.classList.remove('hidden-answer');
+                            answerDiv.classList.add('shown-answer');
+                            if (quizSubmitted && !questionBlock.classList.contains('incorrect-question')) {
+                                // If correct, ensure it's highlighted
+                                const correctLabel = document.getElementById(`label-${questionId}-${q.answer}`);
+                                if (correctLabel) correctLabel.classList.add('correct-option-highlight');
+                            }
+                        } else {
+                            answerDiv.classList.add('hidden-answer');
+                            answerDiv.classList.remove('shown-answer');
+                             // Clear highlights when hiding general answers unless it was an incorrect question
+                            if (!questionBlock.classList.contains('incorrect-question')) {
+                                const labels = questionBlock.querySelectorAll('label');
+                                labels.forEach(lbl => lbl.classList.remove('correct-option-highlight'));
+                            }
+                        }
+                    }
+                });
+            });
+        }
+
+        document.getElementById('shuffleQuestions').addEventListener('change', () => {
+            // If shuffle is toggled, reload the quiz respecting the new setting
+            if (userAnswers && Object.keys(userAnswers).length > 0) { // If quiz has started
+                if(confirm("Changing shuffle option will reset your current progress. Continue?")) {
+                     loadQuiz();
+                } else {
+                    // Revert checkbox if user cancels
+                    document.getElementById('shuffleQuestions').checked = !document.getElementById('shuffleQuestions').checked;
+                }
+            } else {
+                 loadQuiz();
+            }
+        });
+
+        // Load the quiz when the page is ready
+        document.addEventListener('DOMContentLoaded', loadQuiz);
+    </script>
+
+</body>
+</html>
