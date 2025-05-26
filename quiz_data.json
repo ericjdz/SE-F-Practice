@@ -815,6 +815,446 @@
         },
         "answer": "c",
         "source": "UAT PDF"
+      },
+            {
+        "question": "Which quality attribute from the ISO 9126 standard indicates the degree to which the software satisfies stated needs?",
+        "options": {
+          "a": "Maintainability",
+          "b": "Usability",
+          "c": "Reliability",
+          "d": "Functionality"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What should be understood about end users to design a successful user interface?",
+        "options": {
+          "a": "Their age and gender",
+          "b": "The content they interact with",
+          "c": "Their business roles and workflow",
+          "d": "Their technical skills only"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is a common claim made by developers when a project fails?",
+        "options": {
+          "a": "The system was bug-free",
+          "b": "The customer was satisfied with the outcome",
+          "c": "The project was completed without any issues",
+          "d": "The customer changed requirements repeatedly"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which subattributes are suggested by ISO9126 for assessing the reliability of a user interface?",
+        "options": {
+          "a": "recoverability, stability, maturity",
+          "b": "performance, reliability, maintainability",
+          "c": "maturity, fault tolerance, recoverability",
+          "d": "recoverability, fault tolerance, replaceability"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the key principle behind statistical quality assurance and the Pareto principle?",
+        "options": {
+          "a": "Ignore minor defects",
+          "b": "Spend time focusing on things that really matter",
+          "c": "Increase development speed",
+          "d": "Focus on improving all aspects equally"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the primary goal of user interface evaluation?",
+        "options": {
+          "a": "To enhance the visual design",
+          "b": "To simplify the coding process",
+          "c": "To determine whether the interface meets the needs of the user",
+          "d": "To increase development speed"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What does the customer typically claim when a software project goes wrong?",
+        "options": {
+          "a": "That the project was completed on time",
+          "b": "That the developer has been negligent in applying software practices",
+          "c": "That the developer met all requirements",
+          "d": "That the developer exceeded expectations"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What does the \"integrity\" quality factor refer to?",
+        "options": {
+          "a": "The extent to which access to software or data by unauthorized persons can be controlled",
+          "b": "The extent to which the software can be reused in other applications",
+          "c": "The effort required to transfer the program from one environment to another",
+          "d": "The ease with which repair may be made to the software"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Why is consistency important in user interface design?",
+        "options": {
+          "a": "To increase the complexity of the interface",
+          "b": "To maintain a uniform experience with navigation controls, menus, icons, and aesthetics",
+          "c": "To ensure the interface is complex and challenging",
+          "d": "To reduce the visual appeal of the interface"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which method is used to collect qualitative data during user interface evaluation?",
+        "options": {
+          "a": "Prototyping",
+          "b": "Time-study analysis",
+          "c": "Questionnaires",
+          "d": "Coding tests"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which principle addresses the need for an interface to support different user interaction styles, such as direct task completion and exploratory navigation?",
+        "options": {
+          "a": "Efficiency",
+          "b": "Controlled Autonomy",
+          "c": "Latency Reduction",
+          "d": "Flexibility"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the Pareto principle mentioned in the lecture?",
+        "options": {
+          "a": "50 percent of the defects can be traced to 50 percent of all possible causes",
+          "b": "80 percent of the defects can be traced to 20 percent of all possible causes",
+          "c": "100 percent of the defects can be traced to 50 percent of all possible causes",
+          "d": "20 percent of the defects can be traced to 80 percent of all possible causes"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the formula for calculating software availability?",
+        "options": {
+          "a": "Availability = MTTR / (MTTF - MTTR) * 100%",
+          "b": "Availability = MTTF / (MTTF + MTTR) * 100%",
+          "c": "Availability = MTTF / (MTTF - MTTR) * 100%",
+          "d": "Availability = MTTR / (MTTF + MTTR) * 100%"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What does the term \"good enough\" software imply?",
+        "options": {
+          "a": "Software that is not released to the market",
+          "b": "Software that delivers high-quality functions but may have known bugs",
+          "c": "Software that is free of any defects",
+          "d": "Software that meets the highest quality standards"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the primary goal of software testing in SQA?",
+        "options": {
+          "a": "To increase development speed",
+          "b": "To reduce the number of features",
+          "c": "To enhance visual design",
+          "d": "To find errors"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What additional steps does Six Sigma suggest if improvement is required in an existing software process?",
+        "options": {
+          "a": "Focus on visual design and user interface",
+          "b": "Speed up development and reduce documentation",
+          "c": "Develop new features and reduce testing",
+          "d": "Improve the process by eliminating root causes of defects and control the process to prevent reintroduction of defects"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "In the context of user interface design, what does a use case typically describe?",
+        "options": {
+          "a": "The marketing strategy for the system",
+          "b": "The technical specifications of the system",
+          "c": "The interaction between an actor and the system",
+          "d": "The hardware requirements for the system"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which of the following activities is NOT one of the four distinct framework activities in the user interface analysis and design process?",
+        "options": {
+          "a": "Interface design",
+          "b": "Interface implementation",
+          "c": "Interface validation",
+          "d": "Interface analysis and modeling"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What tool can be effectively used to represent workflow in user interface design?",
+        "options": {
+          "a": "Gantt chart",
+          "b": "UML swimlane diagram",
+          "c": "Use case diagram",
+          "d": "Entity-relationship diagram"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Why should design issues like system response time and error handling be considered at the beginning of software design?",
+        "options": {
+          "a": "To ensure all features are implemented",
+          "b": "To avoid creating prototypes",
+          "c": "To reduce unnecessary iterations and project delays",
+          "d": "To enhance all features implemented"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What kind of visual layout helps users rely on well-understood cues instead of memorizing sequences?",
+        "options": {
+          "a": "Mnemonic shortcuts",
+          "b": "Hierarchical organization",
+          "c": "Consistent design rules",
+          "d": "Real-world metaphors"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which task involves identifying, describing, and elaborating the tasks that the user performs to accomplish system goals?",
+        "options": {
+          "a": "Environment analysis",
+          "b": "Task analysis",
+          "c": "Requirements analysis",
+          "d": "Interface design"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Why is it essential to maintain consistency across a product line?",
+        "options": {
+          "a": "To implement new design standards",
+          "b": "To provide a uniform user experience",
+          "c": "To enhance the visual appeal",
+          "d": "To ensure varied interaction mechanisms"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which principle ensures a user interface remains effective when interrupting and resuming tasks?",
+        "options": {
+          "a": "Undoable actions",
+          "b": "Consistent navigation",
+          "c": "Direct manipulation",
+          "d": "Flexible interaction"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which subattributes are suggested by ISO9126 for assessing the maintainability of a user interface?",
+        "options": {
+          "a": "performance, reliability, maintainability",
+          "b": "testability, stability, understandability",
+          "c": "portability, installability, replaceability",
+          "d": "analyzability, changeability, stability"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which quality attribute from the ISO 9126 standard deals with the degree to which the software makes optimal use of system resources?",
+        "options": {
+          "a": "Usability",
+          "b": "Maintainability",
+          "c": "Efficiency",
+          "d": "Functionality"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which view of quality measures it based on how much a customer is willing to pay for a product?",
+        "options": {
+          "a": "Programmer's view",
+          "b": "User view",
+          "c": "Value-based view",
+          "d": "Product view"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which subattributes are suggested by ISO9126 for assessing the portability of a user interface?",
+        "options": {
+          "a": "testability, stability, understandability",
+          "b": "adaptability, installability, replaceability",
+          "c": "performance, reliability, maintainability",
+          "d": "analyzability, changeability, stability"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which design approach calls for reducing relearning upon revisit and making the interface simple to learn?",
+        "options": {
+          "a": "Flexibility",
+          "b": "Learnability",
+          "c": "Time-study analysis",
+          "d": "Readability"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which subattributes are suggested by ISO9126 for assessing the usability of a user interface?",
+        "options": {
+          "a": "Understandability, learnability, operability",
+          "b": "Intuitiveness, efficiency, robustness",
+          "c": "Performance, reliability, maintainability",
+          "d": "Functionality, portability, reusability"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What does the \"durability\" quality factor refer to?",
+        "options": {
+          "a": "The degree to which the software is easy to use",
+          "b": "The ease with which the software can be ported to other environments",
+          "c": "The software's capability to be maintained or corrected without unintended side effects",
+          "d": "The ease with which repair may be made to the software"
+        },
+        "answer": "c",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What are the two important characteristics of system response time?",
+        "options": {
+          "a": "Duration and consistency",
+          "b": "Speed and accuracy",
+          "c": "Complexity and simplicity",
+          "d": "Length and variability"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What should be done to maintain consistency if past interactive models have set user expectations?",
+        "options": {
+          "a": "Follow new design trends",
+          "b": "Avoid making any changes",
+          "c": "Always change to improve",
+          "d": "Make changes only for compelling reasons"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What are the three core steps of the Six Sigma methodology?",
+        "options": {
+          "a": "Define, measure, analyze",
+          "b": "Test, debug, release",
+          "c": "Design, develop, deliver",
+          "d": "Plan, code, test"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What kind of questions helps in understanding the users of a system for user interface design?",
+        "options": {
+          "a": "Questions about users' education, experience, and preferences",
+          "b": "Questions about the cost of development",
+          "c": "Questions about marketing strategies",
+          "d": "Questions about the technical specifications of the system"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is Six Sigma derived from?",
+        "options": {
+          "a": "Six programming languages",
+          "b": "Six standard deviations",
+          "c": "Six quality attributes",
+          "d": "Six software processes"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What is the formula for calculating MTBF?",
+        "options": {
+          "a": "MTBF = MTTR * MTTF",
+          "b": "MTBF = MTTF / MTTR",
+          "c": "MTBF = MTTF - MTTR",
+          "d": "MTBF = MTTF + MTTR"
+        },
+        "answer": "d",
+        "source": "OCR Image"
+      },
+      {
+        "question": "What does the \"serviceability\" quality factor refer to?",
+        "options": {
+          "a": "The effort required to modify an operational program",
+          "b": "The software’s capability to be maintained or corrected in an acceptable time period",
+          "c": "The software's ability to adapt to new environments",
+          "d": "The software’s feature quality that delights first-time users"
+        },
+        "answer": "b",
+        "source": "OCR Image"
+      },
+      {
+        "question": "In software development, what does \"quality of conformance\" refer to?",
+        "options": {
+          "a": "The degree to which the implementation follows the design",
+          "b": "The inherent characteristics of the software",
+          "c": "The amount of value users are willing to pay",
+          "d": "The degree to which the design meets user requirements"
+        },
+        "answer": "a",
+        "source": "OCR Image"
+      },
+      {
+        "question": "Which design principle suggests that an application should predict the user's next move?",
+        "options": {
+          "a": "Anticipation",
+          "b": "Consistency",
+          "c": "Communication",
+          "d": "Efficiency"
+        },
+        "answer": "a",
+        "source": "OCR Image"
       }
     ]
   }
